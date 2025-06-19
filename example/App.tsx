@@ -1,37 +1,17 @@
-import { useEvent } from 'expo';
-import ReactNativeTestflight, { ReactNativeTestflightView } from 'react-native-testflight';
-import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import ReactNativeTestflight from 'react-native-testflight';
+import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 
 export default function App() {
-  const onChangePayload = useEvent(ReactNativeTestflight, 'onChange');
-
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.container}>
         <Text style={styles.header}>Module API Example</Text>
         <Group name="Constants">
-          <Text>{ReactNativeTestflight.PI}</Text>
-        </Group>
-        <Group name="Functions">
-          <Text>{ReactNativeTestflight.hello()}</Text>
-        </Group>
-        <Group name="Async functions">
-          <Button
-            title="Set value"
-            onPress={async () => {
-              await ReactNativeTestflight.setValueAsync('Hello from JS!');
-            }}
-          />
-        </Group>
-        <Group name="Events">
-          <Text>{onChangePayload?.value}</Text>
-        </Group>
-        <Group name="Views">
-          <ReactNativeTestflightView
-            url="https://www.example.com"
-            onLoad={({ nativeEvent: { url } }) => console.log(`Loaded: ${url}`)}
-            style={styles.view}
-          />
+          {ReactNativeTestflight && (
+            ReactNativeTestflight.environment ? (
+              <Text>{ReactNativeTestflight.environment}</Text>
+            ) : null
+          )}
         </Group>
       </ScrollView>
     </SafeAreaView>
@@ -65,9 +45,5 @@ const styles = {
   container: {
     flex: 1,
     backgroundColor: '#eee',
-  },
-  view: {
-    flex: 1,
-    height: 200,
   },
 };

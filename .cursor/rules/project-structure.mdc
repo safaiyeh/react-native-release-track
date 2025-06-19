@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# React Native Testflight - Project Structure Guide
+
+This repository contains an Expo/React Native module (`react-native-testflight`) with platform-specific native code and an accompanying example application.
+
+## Module entry points
+
+- Public TypeScript API: [src/index.ts](mdc:src/index.ts)
+- Shared JavaScript implementation: [src/ReactNativeTestflightModule.ts](mdc:src/ReactNativeTestflightModule.ts)
+- iOS native implementation: [ios/ReactNativeTestflightModule.swift](mdc:ios/ReactNativeTestflightModule.swift)
+- Android native implementation: [android/src/main/java/expo/modules/testflight/ReactNativeTestflightModule.kt](mdc:android/src/main/java/expo/modules/testflight/ReactNativeTestflightModule.kt)
+
+## Example application
+
+All demo code lives under the [example](mdc:example) directory.
+
+- App entry point: [example/App.tsx](mdc:example/App.tsx)
+- Metro entry file: [example/index.ts](mdc:example/index.ts)
+
+## Build configuration & metadata
+
+- Expo module configuration: [expo-module.config.json](mdc:expo-module.config.json)
+- Android Gradle root build file: [android/build.gradle](mdc:android/build.gradle)
+- iOS CocoaPods specification: [ios/ReactNativeTestflight.podspec](mdc:ios/ReactNativeTestflight.podspec)
