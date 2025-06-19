@@ -1,7 +1,7 @@
 {
-  "name": "react-native-testflight",
+  "name": "react-native-release-track",
   "version": "0.1.0",
-  "description": "React Native Module to check if your app is in Simulator, TestFlight, or Production.",
+  "description": "React Native module to detect whether the current run-time is Simulator, TestFlight-like, Production, or Unknown.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -18,7 +18,7 @@
   "keywords": [
     "react-native",
     "expo",
-    "react-native-testflight",
+    "react-native-release-track",
     "ReactNativeTestflight"
   ],
   "repository": "https://github.com/safaiyeh/react-native-testflight",

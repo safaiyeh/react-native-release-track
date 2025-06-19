@@ -3,8 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "react-native-testflight": ["../src/index"],
-      "react-native-testflight/*": ["../src/*"]
+      "react-native-release-track": ["../src/index"],
+      "react-native-release-track/*": ["../src/*"]
     }
   }
 }

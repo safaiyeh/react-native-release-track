@@ -1716,7 +1716,7 @@ PODS:
     - React-logger (= 0.79.4)
     - React-perflogger (= 0.79.4)
     - React-utils (= 0.79.4)
-  - ReactNativeTestflight (0.1.0):
+  - ReactNativeReleaseTrack (0.1.0):
     - ExpoModulesCore
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
@@ -1800,7 +1800,7 @@ DEPENDENCIES:
   - ReactAppDependencyProvider (from `build/generated/ios`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - ReactNativeTestflight (from `../../ios`)
+  - ReactNativeReleaseTrack (from `../../ios`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -1961,7 +1961,7 @@ EXTERNAL SOURCES:
     :path: build/generated/ios
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
-  ReactNativeTestflight:
+  ReactNativeReleaseTrack:
     :path: "../../ios"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
@@ -2043,7 +2043,7 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: bf62814e0fde923f73fc64b7e82d76c63c284da9
   ReactCodegen: f891084749d03b8af8a244cefaa492e491b763fd
   ReactCommon: c7d636ec1b9801ff4ee83cce8e0bf74a1610fc3f
-  ReactNativeTestflight: cd37a2d5e7f261f07f6596f3e23533f414560b0a
+  ReactNativeReleaseTrack: d9072d841de8a521f1388c21e8ae2596ba2a6913
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: a6cb833e04fb8c59a012b49fb1d040fcb0cbb633
 

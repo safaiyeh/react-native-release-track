@@ -19,7 +19,7 @@ config.resolver.nodeModulesPaths = [
 ];
 
 config.resolver.extraNodeModules = {
-  'react-native-testflight': '..',
+  'react-native-release-track': '..',
 };
 
 config.watchFolders = [path.resolve(__dirname, '..')];

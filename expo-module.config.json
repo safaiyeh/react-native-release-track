@@ -1,9 +1,9 @@
 {
   "platforms": ["apple", "android", "web"],
   "apple": {
-    "modules": ["ReactNativeTestflightModule"]
+    "modules": ["ReactNativeReleaseTrackModule"]
   },
   "android": {
-    "modules": ["expo.modules.testflight.ReactNativeTestflightModule"]
+    "modules": ["expo.modules.releasetrack.ReactNativeReleaseTrackModule"]
   }
 }

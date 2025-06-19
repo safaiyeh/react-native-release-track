@@ -5,14 +5,14 @@ alwaysApply: true
 ---
 # React Native Testflight - Project Structure Guide
 
-This repository contains an Expo/React Native module (`react-native-testflight`) with platform-specific native code and an accompanying example application.
+This repository contains an Expo/React Native module (`react-native-release-track`) with platform-specific native code and an accompanying example application.
 
 ## Module entry points
 
 - Public TypeScript API: [src/index.ts](mdc:src/index.ts)
-- Shared JavaScript implementation: [src/ReactNativeTestflightModule.ts](mdc:src/ReactNativeTestflightModule.ts)
-- iOS native implementation: [ios/ReactNativeTestflightModule.swift](mdc:ios/ReactNativeTestflightModule.swift)
-- Android native implementation: [android/src/main/java/expo/modules/testflight/ReactNativeTestflightModule.kt](mdc:android/src/main/java/expo/modules/testflight/ReactNativeTestflightModule.kt)
+- Shared JavaScript implementation: [src/ReactNativeReleaseTrackModule.ts](mdc:src/ReactNativeReleaseTrackModule.ts)
+- iOS native implementation: [ios/ReactNativeReleaseTrackModule.swift](mdc:ios/ReactNativeReleaseTrackModule.swift)
+- Android native implementation: [android/src/main/java/expo/modules/releasetrack/ReactNativeReleaseTrackModule.kt](mdc:android/src/main/java/expo/modules/releasetrack/ReactNativeReleaseTrackModule.kt)
 
 ## Example application
 

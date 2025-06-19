@@ -1,4 +1,4 @@
-# React Native Testflight
+# React Native Release Track
 
 Detect at runtime whether your React-Native app is running in:
 
@@ -15,11 +15,11 @@ The library exposes a **constant** and a **function** so you can branch logic or
 
 ```bash
 # with npm
-yarn add react-native-testflight
+yarn add react-native-release-track
 # or
-yarn add react-native-testflight
+yarn add react-native-release-track
 # if you use Expo managed workflow
-npx expo install react-native-testflight
+npx expo install react-native-release-track
 ```
 
 This is an [Expo Modules](https://docs.expo.dev/modules/overview/)–style package. If you are on bare React-Native the native code is automatically linked via `pod install` (iOS) and Gradle (Android).
@@ -29,13 +29,13 @@ This is an [Expo Modules](https://docs.expo.dev/modules/overview/)–style packa
 ## Usage
 
 ```ts
-import Testflight, { Environment } from 'react-native-testflight';
+import ReleaseTrack, { Environment } from 'react-native-release-track';
 
 // 1. constant (preferred – synchronous)
-console.log(Testflight.environment);   // Environment.SIMULATOR | Environment.TESTFLIGHT | Environment.PRODUCTION | Environment.UNKNOWN
+console.log(ReleaseTrack.environment);   // Environment.SIMULATOR | Environment.TESTFLIGHT | Environment.PRODUCTION | Environment.UNKNOWN
 
 // 2. function (identical value, but callable later)
-const env: Environment = Testflight.getEnvironment();
+const env: Environment = ReleaseTrack.getEnvironment();
 
 if (env === Environment.TESTFLIGHT) {
   // ...
@@ -47,7 +47,7 @@ if (env === Environment.TESTFLIGHT) {
 When bundling with **react-native-web** the module resolves to `null`. Guard your calls accordingly:
 
 ```ts
-if (Testflight && Testflight.environment === 'TESTFLIGHT') {
+if (ReleaseTrack && ReleaseTrack.environment === 'TESTFLIGHT') {
   // …
 }
 ```
@@ -82,7 +82,7 @@ Android doesn't expose which **Play track** (internal, alpha, beta) the app came
    <!-- AndroidManifest.xml -->
    <application …>
      <meta-data
-         android:name="com.reactnativetestflight.track"
+         android:name="com.reactnativereleasetrack.track"
          android:value="test"/>
    </application>
    ```
@@ -113,11 +113,11 @@ On Web the default export is `null` and therefore none of the members exist.
 A minimal Expo example is in the `example/` folder. It prints the detected environment:
 
 ```tsx
-import Testflight, { Environment } from 'react-native-testflight';
+import ReleaseTrack, { Environment } from 'react-native-release-track';
 import { Text } from 'react-native';
 
 export default function App() {
-  return <Text>{Testflight?.environment}</Text>;
+  return <Text>{ReleaseTrack?.environment}</Text>;
 }
 ```
 

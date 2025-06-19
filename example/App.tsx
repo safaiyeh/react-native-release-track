@@ -1,4 +1,4 @@
-import ReactNativeTestflight from 'react-native-testflight';
+import ReleaseTrack from 'react-native-release-track';
 import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 
 export default function App() {
@@ -7,9 +7,9 @@ export default function App() {
       <ScrollView style={styles.container}>
         <Text style={styles.header}>Module API Example</Text>
         <Group name="Constants">
-          {ReactNativeTestflight && (
-            ReactNativeTestflight.environment ? (
-              <Text>{ReactNativeTestflight.environment}</Text>
+          {ReleaseTrack && (
+            ReleaseTrack.environment ? (
+              <Text>{ReleaseTrack.environment}</Text>
             ) : null
           )}
         </Group>

@@ -12,17 +12,12 @@ export enum Environment {
   UNKNOWN = 'UNKNOWN',
 }
 
-declare class ReactNativeTestflightModule extends NativeModule {
-  /**
-   * Detected runtime environment.
-   */
+declare class ReactNativeReleaseTrackModule extends NativeModule {
+  /** Detected runtime environment. */
   environment: Environment;
 
-  /**
-   * Returns the current runtime environment.
-   */
+  /** Returns the current runtime environment. */
   getEnvironment(): Environment;
 }
 
-// This call loads the native module object from the JSI.
-export default requireNativeModule<ReactNativeTestflightModule>('ReactNativeTestflight');
+export default requireNativeModule<ReactNativeReleaseTrackModule>('ReactNativeReleaseTrack'); 
